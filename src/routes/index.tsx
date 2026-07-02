@@ -210,7 +210,7 @@ function Index() {
             <span className="italic text-gradient"> across product, print & pixels.</span>
           </h2>
           <p className="mt-6 max-w-md text-muted-foreground">
-            Based in Kano, working globally. I lead brand and product design engagements
+            Based in Abuja, working globally. I lead brand and product design engagements
             for teams that care about craft — and I keep an obsessive sketchbook.
           </p>
         </div>
@@ -272,7 +272,7 @@ function Index() {
 
       <footer className="relative z-10 mx-auto flex max-w-7xl flex-col items-start justify-between gap-4 border-t border-border/50 px-6 py-8 text-xs text-muted-foreground md:flex-row md:items-center md:px-10">
         <p>© 2026 Fatima Yusuf Adam. Designed & built with care.</p>
-        <p className="tracking-widest uppercase">Kano · Available for projects</p>
+        <p className="tracking-widest uppercase">Abuja · Available for projects</p>
       </footer>
     </div>
   );

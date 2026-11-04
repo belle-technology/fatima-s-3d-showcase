@@ -10,36 +10,52 @@ export const Route = createFileRoute("/")({
 
 const works = [
   {
-    title: "Northwind Rebrand",
+    title: "Carbon Compass",
+    tag: "Sustainability · Product",
+    year: "2025",
+    desc: "A carbon-tracking platform that helps businesses measure and cut their emissions footprint.",
+    url: "#",
+    accent: "from-[#4c8bf5] to-[#3ecf8e]",
+  },
+  {
+    title: "Belletech Impact",
     tag: "Brand Identity",
     year: "2025",
-    desc: "Full visual identity system and motion guidelines for a Lagos-based fintech.",
-    url: "https://www.behance.net/",
+    desc: "Brand system and visual identity for a technology company with social impact at its core.",
+    url: "#",
     accent: "from-[#f2b544] to-[#d16ba5]",
   },
   {
-    title: "Amana Health App",
-    tag: "Product Design",
-    year: "2025",
-    desc: "Reimagined maternal-care mobile experience for underserved communities.",
-    url: "https://dribbble.com/",
-    accent: "from-[#d16ba5] to-[#8a5cf6]",
+    title: "Fruitful Seedlings",
+    tag: "Packaging · Art Direction",
+    year: "2024",
+    desc: "Packaging and market identity for an agricultural nursery focused on quality seedlings.",
+    url: "#",
+    accent: "from-[#3ecf8e] to-[#f2b544]",
   },
   {
-    title: "Sahel Editorial Series",
-    tag: "Art Direction",
+    title: "Kookie Queens Bakery",
+    tag: "Web / E-commerce",
     year: "2024",
-    desc: "A three-part editorial exploring Sahelian craft, published in print and web.",
-    url: "https://www.behance.net/",
+    desc: "Playful online storefront and ordering experience for a beloved local bakery.",
+    url: "#",
+    accent: "from-[#d16ba5] to-[#f2b544]",
+  },
+  {
+    title: "Guardian Pass",
+    tag: "Product Design",
+    year: "2024",
+    desc: "Secure access and credential experience designed for clarity, speed and trust.",
+    url: "#",
     accent: "from-[#8a5cf6] to-[#4c8bf5]",
   },
   {
-    title: "Kano Museum Site",
-    tag: "Web / Interactive",
-    year: "2024",
-    desc: "Interactive museum microsite with 3D artefact viewers and audio essays.",
-    url: "https://awwwards.com/",
-    accent: "from-[#4c8bf5] to-[#f2b544]",
+    title: "Zyra Finance",
+    tag: "Fintech · UX",
+    year: "2023",
+    desc: "End-to-end mobile banking experience with a focus on everyday money clarity.",
+    url: "#",
+    accent: "from-[#f2b544] to-[#8a5cf6]",
   },
 ];
 
@@ -156,7 +172,7 @@ function Index() {
             <p className="mb-3 text-xs tracking-widest uppercase text-muted-foreground">Selected work</p>
             <h2 className="text-4xl font-semibold md:text-6xl">Recent things<br /><span className="italic text-gradient">I'm proud of.</span></h2>
           </div>
-          <span className="hidden text-sm text-muted-foreground md:block">04 projects</span>
+          <span className="hidden text-sm text-muted-foreground md:block">06 projects</span>
         </div>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">

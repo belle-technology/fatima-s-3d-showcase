@@ -14,7 +14,7 @@ const works = [
     tag: "Sustainability · Product",
     year: "2025",
     desc: "A carbon-tracking platform that helps businesses measure and cut their emissions footprint.",
-    url: "#",
+    url: "https://verdantcarboncompass.lovable.app",
     accent: "from-[#4c8bf5] to-[#3ecf8e]",
   },
   {
@@ -22,7 +22,7 @@ const works = [
     tag: "Brand Identity",
     year: "2025",
     desc: "Brand system and visual identity for a technology company with social impact at its core.",
-    url: "#",
+    url: "https://belletech.lovable.app",
     accent: "from-[#f2b544] to-[#d16ba5]",
   },
   {
@@ -30,7 +30,7 @@ const works = [
     tag: "Packaging · Art Direction",
     year: "2024",
     desc: "Packaging and market identity for an agricultural nursery focused on quality seedlings.",
-    url: "#",
+    url: "https://fruitful-seedlingsng.lovable.app",
     accent: "from-[#3ecf8e] to-[#f2b544]",
   },
   {
@@ -38,7 +38,7 @@ const works = [
     tag: "Web / E-commerce",
     year: "2024",
     desc: "Playful online storefront and ordering experience for a beloved local bakery.",
-    url: "#",
+    url: "https://kookie-queen-bakery.lovable.app",
     accent: "from-[#d16ba5] to-[#f2b544]",
   },
   {
@@ -46,7 +46,7 @@ const works = [
     tag: "Product Design",
     year: "2024",
     desc: "Secure access and credential experience designed for clarity, speed and trust.",
-    url: "#",
+    url: "https://silent-beacon-route-intelligence.lovable.app",
     accent: "from-[#8a5cf6] to-[#4c8bf5]",
   },
   {
@@ -54,7 +54,7 @@ const works = [
     tag: "Fintech · UX",
     year: "2023",
     desc: "End-to-end mobile banking experience with a focus on everyday money clarity.",
-    url: "#",
+    url: "https://zyrafinance.lovable.app",
     accent: "from-[#f2b544] to-[#8a5cf6]",
   },
 ];

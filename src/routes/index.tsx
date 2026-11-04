@@ -188,8 +188,8 @@ function Index() {
               <TiltCard className="group relative h-full">
                 <a
                   href={w.url}
-                  target="_blank"
-                  rel="noreferrer"
+                  target={w.url.startsWith("http") ? "_blank" : undefined}
+                  rel={w.url.startsWith("http") ? "noreferrer" : undefined}
                   className="glass relative flex h-full flex-col overflow-hidden rounded-3xl p-8 transition"
                 >
                   <div className={`absolute inset-0 opacity-0 transition duration-500 group-hover:opacity-30 bg-gradient-to-br ${w.accent}`} />

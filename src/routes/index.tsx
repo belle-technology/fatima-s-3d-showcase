@@ -14,8 +14,7 @@ const works = [
     tag: "Sustainability · Product",
     year: "2025",
     desc: "A carbon-tracking platform that helps businesses measure and cut their emissions footprint.",
-    url: "#",
-    accent: "from-[#4c8bf5] to-[#3ecf8e]",
+    url: "https://verdantcarboncompass.lovable.app",
   },
   {
     title: "Belletech Impact",

@@ -69,12 +69,6 @@ const works = [
   },
 ];
 
-const timeline = [
-  { year: "2024 — Now", role: "Senior Software Engineer", place: "Independent Studio" },
-  { year: "2022 — 2024", role: "Software Engineer", place: "Paystack" },
-  { year: "2020 — 2022", role: "Frontend Developer", place: "Andela" },
-];
-
 const skills = ["TypeScript", "React", "Node.js", "PostgreSQL", "Python", "AWS"];
 
 const servicePillars = [
@@ -95,18 +89,11 @@ const servicePillars = [
   },
 ];
 
-const serviceStats = [
-  { value: "1,200+", label: "customers helped" },
-  { value: "98%", label: "satisfaction score" },
-  { value: "< 3 min", label: "average reply time" },
-  { value: "0", label: "escalated complaints" },
-];
-
 const serviceWins = [
-  "Resolved 60+ enquiries a day across phone, email and chat.",
-  "Cut average reply time from 12 minutes to under 3 by rebuilding the team's response templates.",
-  "Recovered 40+ at-risk accounts with honest, plain-language follow-up.",
-  "Trained 8 new hires on tone, product knowledge and de-escalation.",
+  "Handled a steady stream of enquiries across phone, email and chat without losing patience or accuracy.",
+  "Turned complaints into fixes by explaining things in plain language, not policy language.",
+  "Followed up until the problem was actually closed, not just marked done.",
+  "Showed new team members how to hold tone and product knowledge under pressure.",
 ];
 
 function Index() {
@@ -145,7 +132,7 @@ function Index() {
             transition={{ duration: 0.6 }}
             className="glass mb-8 inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs tracking-widest uppercase text-muted-foreground"
           >
-            <Sparkles className="h-3 w-3 text-primary" /> Portfolio · CV · 2026
+            <Sparkles className="h-3 w-3 text-primary" /> Full Stack Engineer · CV · 2026
           </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -163,7 +150,7 @@ function Index() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="mt-6 max-w-md text-lg text-muted-foreground"
           >
-            Software engineer who ships products end to end — data model, API,
+            Full stack engineer who ships products end to end — data model, API,
             interface — and cares about the parts users never see as much as the ones they do.
           </motion.p>
 
@@ -261,37 +248,18 @@ function Index() {
       </section>
 
       {/* About / CV */}
-      <section id="about" className="relative z-10 mx-auto max-w-7xl px-6 py-24 md:grid md:grid-cols-12 md:gap-12 md:px-10">
-        <div className="md:col-span-5">
+      <section id="about" className="relative z-10 mx-auto max-w-7xl px-6 py-24 md:px-10 md:py-32">
+        <div className="mx-auto max-w-4xl text-center">
           <p className="mb-3 text-xs tracking-widest uppercase text-muted-foreground">The short version</p>
-          <h2 className="text-4xl font-semibold md:text-5xl">
-            Six years shipping
-            <span className="italic text-gradient"> software that has to keep working.</span>
+          <h2 className="text-4xl font-semibold md:text-7xl">
+            Full stack,
+            <span className="italic text-gradient"> from schema to shipped.</span>
           </h2>
-          <p className="mt-6 max-w-md text-muted-foreground">
+          <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
             Based in Abuja, working globally. I take products from schema to shipped —
             APIs, data models, interfaces — and I leave things documented, tested and easy
             for the next person to pick up.
           </p>
-        </div>
-        <div className="mt-12 md:col-span-7 md:mt-0">
-          <ol className="relative border-l border-border/60 pl-8">
-            {timeline.map((t, i) => (
-              <motion.li
-                key={t.year}
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="mb-10 last:mb-0"
-              >
-                <span className="absolute -left-[7px] mt-2 h-3 w-3 rounded-full bg-primary shadow-[0_0_20px_var(--glow)]" />
-                <p className="text-xs tracking-widest uppercase text-muted-foreground">{t.year}</p>
-                <p className="mt-2 text-2xl font-semibold md:text-3xl">{t.role}</p>
-                <p className="text-muted-foreground">{t.place}</p>
-              </motion.li>
-            ))}
-          </ol>
         </div>
       </section>
 
@@ -323,9 +291,8 @@ function Index() {
               <span className="glass relative inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs tracking-widest uppercase text-muted-foreground">
                 <ShieldCheck className="h-3 w-3 text-primary" /> Experience
               </span>
-              <p className="relative mt-8 text-xs tracking-widest uppercase text-muted-foreground">2019 — 2021</p>
-              <h3 className="relative mt-2 text-3xl font-semibold md:text-4xl">Customer Service Representative</h3>
-              <p className="relative mt-1 text-muted-foreground">Retail &amp; hospitality support</p>
+              <h3 className="relative mt-8 text-3xl font-semibold md:text-4xl">Customer Service Representative</h3>
+              <p className="relative mt-1 text-muted-foreground">Front-line support · phone, email &amp; chat</p>
               <ul className="relative mt-8 space-y-4">
                 {serviceWins.map((w) => (
                   <li key={w} className="flex gap-3 text-sm text-muted-foreground">
@@ -337,43 +304,28 @@ function Index() {
             </div>
           </motion.div>
 
-          <div className="flex flex-col gap-6 lg:col-span-7">
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
-              {servicePillars.map((p, i) => (
-                <motion.div
-                  key={p.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-60px" }}
-                  transition={{ duration: 0.5, delay: i * 0.08 }}
-                >
-                  <TiltCard className="h-full">
-                    <div className="glass flex h-full flex-col rounded-3xl p-6">
-                      <span className="glass flex h-11 w-11 items-center justify-center rounded-full">
-                        <p.icon className="h-5 w-5 text-primary" />
-                      </span>
-                      <h4 className="mt-5 text-lg font-semibold">{p.title}</h4>
-                      <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{p.line}</p>
+          <div className="flex flex-col justify-between gap-6 lg:col-span-7">
+            {servicePillars.map((p, i) => (
+              <motion.div
+                key={p.title}
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{ duration: 0.5, delay: i * 0.08 }}
+              >
+                <TiltCard className="h-full">
+                  <div className="glass flex items-center gap-6 rounded-3xl p-6 md:p-8">
+                    <span className="glass flex h-12 w-12 shrink-0 items-center justify-center rounded-full">
+                      <p.icon className="h-5 w-5 text-primary" />
+                    </span>
+                    <div>
+                      <h4 className="text-lg font-semibold">{p.title}</h4>
+                      <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{p.line}</p>
                     </div>
-                  </TiltCard>
-                </motion.div>
-              ))}
-            </div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.6 }}
-              className="glass grid grid-cols-2 gap-px overflow-hidden rounded-3xl md:grid-cols-4"
-            >
-              {serviceStats.map((s) => (
-                <div key={s.label} className="px-6 py-8 text-center">
-                  <p className="text-gradient text-3xl font-semibold md:text-4xl">{s.value}</p>
-                  <p className="mt-2 text-xs tracking-widest uppercase text-muted-foreground">{s.label}</p>
-                </div>
-              ))}
-            </motion.div>
+                  </div>
+                </TiltCard>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>

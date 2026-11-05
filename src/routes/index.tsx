@@ -21,61 +21,61 @@ export const Route = createFileRoute("/")({
 const works = [
   {
     title: "Carbon Compass",
-    tag: "Sustainability · Product",
+    tag: "Platform · Data",
     year: "2025",
-    desc: "A carbon-tracking platform that helps businesses measure and cut their emissions footprint.",
+    desc: "Carbon-tracking platform — emissions data pipeline, dashboards and reporting, built end to end.",
     url: "https://verdantcarboncompass.lovable.app",
     accent: "from-[#4c8bf5] to-[#3ecf8e]",
   },
   {
     title: "Belletech Impact",
-    tag: "Brand Identity",
+    tag: "Web · Design System",
     year: "2025",
-    desc: "Brand system and visual identity for a technology company with social impact at its core.",
+    desc: "Company marketing site built as a reusable component library.",
     url: "https://belletech.lovable.app",
     accent: "from-[#f2b544] to-[#d16ba5]",
   },
   {
     title: "Fruitful Seedlings",
-    tag: "Packaging · Art Direction",
+    tag: "E-commerce · Catalogue",
     year: "2024",
-    desc: "Packaging and market identity for an agricultural nursery focused on quality seedlings.",
+    desc: "Product catalogue and ordering flow for an agricultural nursery, with stock and delivery handling.",
     url: "https://fruitful-seedlingsng.lovable.app",
     accent: "from-[#3ecf8e] to-[#f2b544]",
   },
   {
     title: "Kookie Queens Bakery",
-    tag: "Web / E-commerce",
+    tag: "Web · Checkout",
     year: "2024",
-    desc: "Playful online storefront and ordering experience for a beloved local bakery.",
+    desc: "Online storefront with cart, checkout and order tracking for a local bakery.",
     url: "https://kookie-queen-bakery.lovable.app",
     accent: "from-[#d16ba5] to-[#f2b544]",
   },
   {
     title: "Guardian Pass",
-    tag: "Product Design",
+    tag: "Security · Access",
     year: "2024",
-    desc: "Secure access and credential experience designed for clarity, speed and trust.",
+    desc: "Credential and access system with role-based permissions, expiry rules and audit trails.",
     url: "https://silent-beacon-route-intelligence.lovable.app",
     accent: "from-[#8a5cf6] to-[#4c8bf5]",
   },
   {
     title: "Zyra Finance",
-    tag: "Fintech · UX",
+    tag: "Fintech · Payments",
     year: "2023",
-    desc: "End-to-end mobile banking experience with a focus on everyday money clarity.",
+    desc: "Mobile banking experience — accounts, transfers and transaction history with honest money states.",
     url: "https://zyrafinance.lovable.app",
     accent: "from-[#f2b544] to-[#8a5cf6]",
   },
 ];
 
 const timeline = [
-  { year: "2024 — Now", role: "Senior Designer", place: "Independent Studio" },
-  { year: "2022 — 2024", role: "Product Designer", place: "Paystack" },
-  { year: "2020 — 2022", role: "Visual Designer", place: "Andela" },
+  { year: "2024 — Now", role: "Senior Software Engineer", place: "Independent Studio" },
+  { year: "2022 — 2024", role: "Software Engineer", place: "Paystack" },
+  { year: "2020 — 2022", role: "Frontend Developer", place: "Andela" },
 ];
 
-const skills = ["Brand Systems", "Motion", "3D / WebGL", "Product Design", "Art Direction", "Typography"];
+const skills = ["TypeScript", "React", "Node.js", "PostgreSQL", "Python", "AWS"];
 
 const servicePillars = [
   {
@@ -163,8 +163,8 @@ function Index() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="mt-6 max-w-md text-lg text-muted-foreground"
           >
-            Designer, art director and maker of quiet, considered digital things.
-            I build brands, products and dimensional web experiences.
+            Software engineer who ships products end to end — data model, API,
+            interface — and cares about the parts users never see as much as the ones they do.
           </motion.p>
 
           <motion.div
@@ -265,12 +265,13 @@ function Index() {
         <div className="md:col-span-5">
           <p className="mb-3 text-xs tracking-widest uppercase text-muted-foreground">The short version</p>
           <h2 className="text-4xl font-semibold md:text-5xl">
-            Six years designing
-            <span className="italic text-gradient"> across product, print & pixels.</span>
+            Six years shipping
+            <span className="italic text-gradient"> software that has to keep working.</span>
           </h2>
           <p className="mt-6 max-w-md text-muted-foreground">
-            Based in Abuja, working globally. I lead brand and product design engagements
-            for teams that care about craft — and I keep an obsessive sketchbook.
+            Based in Abuja, working globally. I take products from schema to shipped —
+            APIs, data models, interfaces — and I leave things documented, tested and easy
+            for the next person to pick up.
           </p>
         </div>
         <div className="mt-12 md:col-span-7 md:mt-0">
@@ -299,13 +300,13 @@ function Index() {
         <div className="mb-14 max-w-3xl">
           <p className="mb-3 text-xs tracking-widest uppercase text-muted-foreground">Customer service</p>
           <h2 className="text-4xl font-semibold md:text-6xl">
-            Service is a
-            <span className="italic text-gradient"> design skill.</span>
+            Service is an
+            <span className="italic text-gradient"> engineering skill.</span>
           </h2>
           <p className="mt-6 max-w-xl text-lg text-muted-foreground">
-            Before pixels, I worked the front line — listening, de-escalating and turning
-            frustrated people into loyal ones. It is the reason I design for the person on
-            the other side of the screen.
+            Before code, I worked the front line — listening, de-escalating and turning
+            frustrated people into loyal ones. It is the reason I build for the person on
+            the other side of the screen, not just for the ticket in front of me.
           </p>
         </div>
 
@@ -413,7 +414,7 @@ function Index() {
       </section>
 
       <footer className="relative z-10 mx-auto flex max-w-7xl flex-col items-start justify-between gap-4 border-t border-border/50 px-6 py-8 text-xs text-muted-foreground md:flex-row md:items-center md:px-10">
-        <p>© 2026 Fatima Yusuf Adam. Designed & built with care.</p>
+        <p>© 2026 Fatima Yusuf Adam. Built with care.</p>
         <p className="tracking-widest uppercase">Abuja · Available for projects</p>
       </footer>
     </div>

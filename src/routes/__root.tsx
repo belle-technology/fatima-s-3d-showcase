@@ -79,10 +79,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Fatima Yusuf Adam — Portfolio & CV" },
-      { name: "description", content: "The personal CV and selected works of Fatima Yusuf Adam." },
+      { name: "description", content: "Software engineer Fatima Yusuf Adam — CV, selected work and contact. Based in Abuja, working globally." },
       { name: "author", content: "Fatima Yusuf Adam" },
       { property: "og:title", content: "Fatima Yusuf Adam — Portfolio & CV" },
-      { property: "og:description", content: "The personal CV and selected works of Fatima Yusuf Adam." },
+      { property: "og:description", content: "Software engineer Fatima Yusuf Adam — CV, selected work and contact. Based in Abuja, working globally." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       

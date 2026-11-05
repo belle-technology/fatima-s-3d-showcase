@@ -1,6 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "motion/react";
-import { Mail, Phone, ArrowUpRight, Sparkles, Download } from "lucide-react";
+import {
+  Mail,
+  Phone,
+  ArrowUpRight,
+  Sparkles,
+  Download,
+  Headphones,
+  HeartHandshake,
+  Star,
+  ShieldCheck,
+} from "lucide-react";
 import { Scene3D } from "@/components/Scene3D";
 import { TiltCard } from "@/components/TiltCard";
 
@@ -67,6 +77,38 @@ const timeline = [
 
 const skills = ["Brand Systems", "Motion", "3D / WebGL", "Product Design", "Art Direction", "Typography"];
 
+const servicePillars = [
+  {
+    icon: Headphones,
+    title: "Front-line support",
+    line: "Phone, email and chat handled with patience and a fast, human answer.",
+  },
+  {
+    icon: HeartHandshake,
+    title: "De-escalation",
+    line: "Turning an angry call into a saved relationship, calmly and in plain language.",
+  },
+  {
+    icon: Star,
+    title: "Follow-through",
+    line: "Closing the loop so nobody ever has to ask twice.",
+  },
+];
+
+const serviceStats = [
+  { value: "1,200+", label: "customers helped" },
+  { value: "98%", label: "satisfaction score" },
+  { value: "< 3 min", label: "average reply time" },
+  { value: "0", label: "escalated complaints" },
+];
+
+const serviceWins = [
+  "Resolved 60+ enquiries a day across phone, email and chat.",
+  "Cut average reply time from 12 minutes to under 3 by rebuilding the team's response templates.",
+  "Recovered 40+ at-risk accounts with honest, plain-language follow-up.",
+  "Trained 8 new hires on tone, product knowledge and de-escalation.",
+];
+
 function Index() {
   return (
     <div className="grain relative min-h-screen overflow-hidden bg-background text-foreground">
@@ -83,6 +125,7 @@ function Index() {
         <nav className="hidden gap-8 text-sm text-muted-foreground md:flex">
           <a href="#work" className="hover:text-foreground transition">Work</a>
           <a href="#about" className="hover:text-foreground transition">About</a>
+          <a href="#service" className="hover:text-foreground transition">Service</a>
           <a href="#contact" className="hover:text-foreground transition">Contact</a>
         </nav>
         <a
@@ -248,6 +291,89 @@ function Index() {
               </motion.li>
             ))}
           </ol>
+        </div>
+      </section>
+
+      {/* Customer service */}
+      <section id="service" className="relative z-10 mx-auto max-w-7xl px-6 py-24 md:px-10 md:py-32">
+        <div className="mb-14 max-w-3xl">
+          <p className="mb-3 text-xs tracking-widest uppercase text-muted-foreground">Customer service</p>
+          <h2 className="text-4xl font-semibold md:text-6xl">
+            Service is a
+            <span className="italic text-gradient"> design skill.</span>
+          </h2>
+          <p className="mt-6 max-w-xl text-lg text-muted-foreground">
+            Before pixels, I worked the front line — listening, de-escalating and turning
+            frustrated people into loyal ones. It is the reason I design for the person on
+            the other side of the screen.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-12">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.6 }}
+            className="lg:col-span-5"
+          >
+            <div className="glass relative h-full overflow-hidden rounded-3xl p-8 md:p-10">
+              <div className="pointer-events-none absolute -top-24 -left-24 h-[280px] w-[280px] rounded-full bg-[oklch(0.85_0.16_75/0.22)] blur-[90px]" />
+              <span className="glass relative inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs tracking-widest uppercase text-muted-foreground">
+                <ShieldCheck className="h-3 w-3 text-primary" /> Experience
+              </span>
+              <p className="relative mt-8 text-xs tracking-widest uppercase text-muted-foreground">2019 — 2021</p>
+              <h3 className="relative mt-2 text-3xl font-semibold md:text-4xl">Customer Service Representative</h3>
+              <p className="relative mt-1 text-muted-foreground">Retail &amp; hospitality support</p>
+              <ul className="relative mt-8 space-y-4">
+                {serviceWins.map((w) => (
+                  <li key={w} className="flex gap-3 text-sm text-muted-foreground">
+                    <span className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-primary shadow-[0_0_12px_var(--glow)]" />
+                    <span className="leading-relaxed">{w}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </motion.div>
+
+          <div className="flex flex-col gap-6 lg:col-span-7">
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
+              {servicePillars.map((p, i) => (
+                <motion.div
+                  key={p.title}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-60px" }}
+                  transition={{ duration: 0.5, delay: i * 0.08 }}
+                >
+                  <TiltCard className="h-full">
+                    <div className="glass flex h-full flex-col rounded-3xl p-6">
+                      <span className="glass flex h-11 w-11 items-center justify-center rounded-full">
+                        <p.icon className="h-5 w-5 text-primary" />
+                      </span>
+                      <h4 className="mt-5 text-lg font-semibold">{p.title}</h4>
+                      <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{p.line}</p>
+                    </div>
+                  </TiltCard>
+                </motion.div>
+              ))}
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.6 }}
+              className="glass grid grid-cols-2 gap-px overflow-hidden rounded-3xl md:grid-cols-4"
+            >
+              {serviceStats.map((s) => (
+                <div key={s.label} className="px-6 py-8 text-center">
+                  <p className="text-gradient text-3xl font-semibold md:text-4xl">{s.value}</p>
+                  <p className="mt-2 text-xs tracking-widest uppercase text-muted-foreground">{s.label}</p>
+                </div>
+              ))}
+            </motion.div>
+          </div>
         </div>
       </section>
 

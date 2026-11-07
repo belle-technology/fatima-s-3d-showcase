@@ -10,11 +10,35 @@ import {
   HeartHandshake,
   Star,
   ShieldCheck,
+  Leaf,
+  Sprout,
+  ShoppingBasket,
+  Cookie,
+  ShieldAlert,
+  Coins,
 } from "lucide-react";
 import { Scene3D } from "@/components/Scene3D";
 import { TiltCard } from "@/components/TiltCard";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Fatima Yusuf Adam — Full Stack Software Engineer" },
+      {
+        name: "description",
+        content:
+          "Full stack software engineer Fatima Yusuf Adam's selected projects, customer service experience, and contact details.",
+      },
+      { property: "og:title", content: "Fatima Yusuf Adam — Full Stack Software Engineer" },
+      {
+        property: "og:description",
+        content:
+          "Explore selected software projects by Fatima Yusuf Adam, a full stack software engineer based in Abuja.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
@@ -23,49 +47,61 @@ const works = [
     title: "Carbon Compass",
     tag: "Platform · Data",
     year: "2025",
-    desc: "Carbon-tracking platform — emissions data pipeline, dashboards and reporting, built end to end.",
+    desc: "Calculate personal or organizational carbon footprints and get AI-guided recommendations for reducing emissions.",
     url: "https://verdantcarboncompass.lovable.app",
     accent: "from-[#4c8bf5] to-[#3ecf8e]",
+    icon: Leaf,
+    tech: ["React", "TypeScript", "TanStack Start", "Tailwind CSS", "Supabase", "AI SDK", "Recharts", "Three.js"],
   },
   {
     title: "Belletech Impact",
     tag: "Web · Design System",
     year: "2025",
-    desc: "Company marketing site built as a reusable component library.",
+    desc: "A climate-impact platform featuring environmental initiatives, project showcases, research, and sustainability tools.",
     url: "https://belletech.lovable.app",
     accent: "from-[#f2b544] to-[#d16ba5]",
+    icon: Sprout,
+    tech: ["React", "TypeScript", "TanStack Start", "Tailwind CSS", "Supabase", "Framer Motion"],
   },
   {
     title: "Fruitful Seedlings",
     tag: "E-commerce · Catalogue",
     year: "2024",
-    desc: "Product catalogue and ordering flow for an agricultural nursery, with stock and delivery handling.",
+    desc: "An online nursery for exploring fruit trees and seedlings, placing orders, and following delivery progress.",
     url: "https://fruitful-seedlingsng.lovable.app",
     accent: "from-[#3ecf8e] to-[#f2b544]",
+    icon: ShoppingBasket,
+    tech: ["React", "TypeScript", "TanStack Start", "Tailwind CSS", "Supabase"],
   },
   {
     title: "Kookie Queens Bakery",
     tag: "Web · Checkout",
     year: "2024",
-    desc: "Online storefront with cart, checkout and order tracking for a local bakery.",
+    desc: "A bakery storefront for browsing handmade cookies and placing small-batch pre-orders for delivery.",
     url: "https://kookie-queen-bakery.lovable.app",
     accent: "from-[#d16ba5] to-[#f2b544]",
+    icon: Cookie,
+    tech: ["React", "TypeScript", "TanStack Start", "Tailwind CSS", "Supabase"],
   },
   {
     title: "Guardian Pass",
     tag: "Security · Access",
     year: "2024",
-    desc: "Credential and access system with role-based permissions, expiry rules and audit trails.",
+    desc: "A personal-safety experience for discreetly signaling distress, alerting trusted contacts, and sharing location.",
     url: "https://silent-beacon-route-intelligence.lovable.app",
     accent: "from-[#8a5cf6] to-[#4c8bf5]",
+    icon: ShieldAlert,
+    tech: ["React", "TypeScript", "TanStack Start", "Tailwind CSS", "Supabase"],
   },
   {
     title: "Zyra Finance",
     tag: "Fintech · Payments",
     year: "2023",
-    desc: "Mobile banking experience — accounts, transfers and transaction history with honest money states.",
+    desc: "A Web3 finance showcase introducing a decentralized exchange concept, with its roadmap and token information.",
     url: "https://zyrafinance.lovable.app",
     accent: "from-[#f2b544] to-[#8a5cf6]",
+    icon: Coins,
+    tech: ["React", "TypeScript", "Vite", "Tailwind CSS", "Framer Motion", "Recharts"],
   },
 ];
 
@@ -227,14 +263,27 @@ function Index() {
                     <span className="text-xs tracking-widest uppercase text-muted-foreground">{w.tag}</span>
                     <span className="text-xs text-muted-foreground">{w.year}</span>
                   </div>
-                  <div className="relative mt-16 aspect-[4/3] w-full overflow-hidden rounded-2xl">
+                  <div className="relative mt-10 flex aspect-[4/3] w-full items-center justify-center overflow-hidden rounded-2xl">
                     <div className={`h-full w-full bg-gradient-to-br ${w.accent} opacity-80`} />
                     <div className="absolute inset-0 grain opacity-40" />
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <w.icon aria-hidden="true" className="h-16 w-16 text-foreground drop-shadow-lg md:h-20 md:w-20" strokeWidth={1.35} />
+                    </div>
                   </div>
-                  <div className="relative mt-6 flex items-center justify-between">
-                    <div>
+                  <div className="relative mt-6 flex items-start justify-between gap-4">
+                    <div className="min-w-0">
                       <h3 className="text-2xl font-semibold md:text-3xl">{w.title}</h3>
                       <p className="mt-2 max-w-sm text-sm text-muted-foreground">{w.desc}</p>
+                      <div className="mt-4 flex flex-wrap gap-2" aria-label={`${w.title} technology stack`}>
+                        {w.tech.map((technology) => (
+                          <span
+                            key={technology}
+                            className="rounded-full border border-border/70 px-2.5 py-1 text-xs text-muted-foreground"
+                          >
+                            {technology}
+                          </span>
+                        ))}
+                      </div>
                     </div>
                     <span className="glass ml-4 flex h-12 w-12 shrink-0 items-center justify-center rounded-full transition group-hover:bg-primary group-hover:text-primary-foreground">
                       <ArrowUpRight className="h-5 w-5" />
